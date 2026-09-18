@@ -9,13 +9,13 @@ Each profile is a complete, isolated Claude Code configuration directory (settin
 **Linux / macOS / WSL / Git Bash (MSYS2):**
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main/install.sh | sh
 ```
 
 **Windows (PowerShell):**
 
 ```powershell
-irm https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main/install.ps1 | iex
 ```
 
 The installer downloads the appropriate scripts and configures your shell. **Restart your shell** (or open a new terminal) after installing.
@@ -274,7 +274,7 @@ If you prefer not to use the install scripts:
 ```sh
 # Download
 mkdir -p "${XDG_DATA_HOME:-$HOME/.local/share}/claude-profile"
-curl -fsSL https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main/claude-profile.sh \
+curl -fsSL https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main/claude-profile.sh \
   -o "${XDG_DATA_HOME:-$HOME/.local/share}/claude-profile/claude-profile.sh"
 
 # Add to shell profile (.bashrc or .zshrc)
@@ -286,8 +286,8 @@ echo '. "${XDG_DATA_HOME:-$HOME/.local/share}/claude-profile/claude-profile.sh"'
 ```powershell
 $dir = "$env:LOCALAPPDATA\claude-profile"
 New-Item -ItemType Directory -Force -Path $dir | Out-Null
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main/claude-profile-init.ps1" -OutFile "$dir\claude-profile-init.ps1"
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main/claude-profile.cmd" -OutFile "$dir\claude-profile.cmd"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main/claude-profile-init.ps1" -OutFile "$dir\claude-profile-init.ps1"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main/claude-profile.cmd" -OutFile "$dir\claude-profile.cmd"
 # Add to PowerShell profile
 Add-Content -Path $PROFILE -Value ". '$dir\claude-profile-init.ps1'"
 # Add to PATH for cmd.exe

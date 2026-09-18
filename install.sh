@@ -3,10 +3,10 @@ set -e
 
 # claude-code-profiles installer
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main/install.sh | sh
-#   wget -qO- https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main/install.sh | sh
+#   curl -fsSL https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main/install.sh | sh
+#   wget -qO- https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main/install.sh | sh
 
-REPO_BASE="https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main"
+REPO_BASE="https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main"
 
 # --- Helpers ---
 

@@ -15,15 +15,15 @@
   <title>claude-profile — Manage Multiple Claude Code Configuration Profiles</title>
   <meta name="description" content="claude-profile lets you manage multiple Claude Code configuration profiles. Switch between work, personal, and project-specific setups with transparent profile resolution. Like nvm for Node, but for Claude Code. Supports bash, zsh, PowerShell, and cmd.exe.">
   <meta name="keywords" content="claude code, claude code profiles, claude-profile, CLAUDE_CONFIG_DIR, claude code configuration, claude code multiple accounts, MCP server profiles, AI coding assistant profiles">
-  <meta name="author" content="Pegasus Heavy Industries">
+  <meta name="author" content="Joseph R. Quinn">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://pegasusheavy.github.io/claude-code-profiles/">
+  <link rel="canonical" href="https://quinnjr.github.io/claude-code-profiles/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="claude-profile — Manage Multiple Claude Code Profiles">
   <meta property="og:description" content="Switch between Claude Code configurations effortlessly. Transparent profile resolution for work, personal, and project-specific setups. Like nvm for Node, but for Claude Code.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://pegasusheavy.github.io/claude-code-profiles/">
+  <meta property="og:url" content="https://quinnjr.github.io/claude-code-profiles/">
   <meta property="og:site_name" content="claude-profile">
   <meta property="og:locale" content="en_US">
 
@@ -42,13 +42,13 @@
         "name": "claude-profile",
         "alternateName": "claude-code-profiles",
         "description": "Manage multiple Claude Code configuration profiles. Switch between work, personal, and project-specific Claude Code setups with transparent profile resolution via CLAUDE_CONFIG_DIR.",
-        "url": "https://pegasusheavy.github.io/claude-code-profiles/",
+        "url": "https://quinnjr.github.io/claude-code-profiles/",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Linux, macOS, Windows, WSL",
         "softwareRequirements": "Claude Code CLI",
         "license": "https://opensource.org/licenses/MIT",
         "isAccessibleForFree": true,
-        "codeRepository": "https://github.com/pegasusheavy/claude-code-profiles",
+        "codeRepository": "https://github.com/quinnjr/claude-code-profiles",
         "programmingLanguage": ["Shell", "PowerShell", "Batch"],
         "offers": {
           "@type": "Offer",
@@ -73,8 +73,8 @@
             "@type": "HowToStep",
             "position": 1,
             "name": "Install claude-profile",
-            "text": "Run: curl -fsSL https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main/install.sh | sh",
-            "url": "https://pegasusheavy.github.io/claude-code-profiles/#install"
+            "text": "Run: curl -fsSL https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main/install.sh | sh",
+            "url": "https://quinnjr.github.io/claude-code-profiles/#install"
           },
           {
             "@type": "HowToStep",
@@ -112,7 +112,7 @@
             "name": "How do I install claude-profile?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "On Linux, macOS, or WSL, run: curl -fsSL https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main/install.sh | sh. On Windows PowerShell, run: irm https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main/install.ps1 | iex. Then restart your shell."
+              "text": "On Linux, macOS, or WSL, run: curl -fsSL https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main/install.sh | sh. On Windows PowerShell, run: irm https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main/install.ps1 | iex. Then restart your shell."
             }
           },
           {
@@ -164,7 +164,7 @@
             "@type": "ListItem",
             "position": 1,
             "name": "claude-profile",
-            "item": "https://pegasusheavy.github.io/claude-code-profiles/"
+            "item": "https://quinnjr.github.io/claude-code-profiles/"
           }
         ]
       }
@@ -348,7 +348,7 @@
         <a href="#commands" class="hidden sm:block text-sm text-cream-300 hover:text-cream-50 transition-colors">Commands</a>
         <a href="#install" class="hidden sm:block text-sm text-cream-300 hover:text-cream-50 transition-colors">Install</a>
         <a href="#faq" class="hidden sm:block text-sm text-cream-300 hover:text-cream-50 transition-colors">FAQ</a>
-        <a href="https://github.com/pegasusheavy/claude-code-profiles"
+        <a href="https://github.com/quinnjr/claude-code-profiles"
            target="_blank" rel="noopener"
            class="text-cream-300 hover:text-terra transition-colors text-lg"
            aria-label="GitHub repository">
@@ -377,7 +377,7 @@
         <div class="hero-anim hero-anim-4 relative inline-block w-full max-w-xl">
           <div class="install-glow relative flex items-center gap-3 bg-dark-50 rounded-xl px-5 py-4 border border-dark-200">
             <span class="text-terra select-none shrink-0">$</span>
-            <code id="install-cmd" class="font-mono text-sm sm:text-base text-cream-50 overflow-x-auto whitespace-nowrap flex-1 text-left">curl -fsSL https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main/install.sh | sh</code>
+            <code id="install-cmd" class="font-mono text-sm sm:text-base text-cream-50 overflow-x-auto whitespace-nowrap flex-1 text-left">curl -fsSL https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main/install.sh | sh</code>
             <button onclick="copyInstall(this)" class="relative shrink-0 text-cream-300 hover:text-terra transition-colors p-1" aria-label="Copy install command">
               <i class="fa-regular fa-copy"></i>
               <span class="copy-tooltip absolute -top-8 left-1/2 -translate-x-1/2 text-xs bg-dark-100 text-terra px-2 py-1 rounded whitespace-nowrap">Copied!</span>
@@ -585,7 +585,7 @@
             <div class="bg-dark-50 border border-dark-200 border-t-0 rounded-b-2xl p-5">
               <div class="flex items-center gap-3">
                 <span class="text-terra select-none shrink-0">$</span>
-                <code id="install-unix" class="font-mono text-sm text-cream-50 overflow-x-auto whitespace-nowrap flex-1">curl -fsSL https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main/install.sh | sh</code>
+                <code id="install-unix" class="font-mono text-sm text-cream-50 overflow-x-auto whitespace-nowrap flex-1">curl -fsSL https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main/install.sh | sh</code>
                 <button onclick="copyText('install-unix', this)" class="relative shrink-0 text-cream-300 hover:text-terra transition-colors p-1" aria-label="Copy">
                   <i class="fa-regular fa-copy"></i>
                   <span class="copy-tooltip absolute -top-8 left-1/2 -translate-x-1/2 text-xs bg-dark-100 text-terra px-2 py-1 rounded whitespace-nowrap">Copied!</span>
@@ -602,7 +602,7 @@
             <div class="bg-dark-50 border border-dark-200 border-t-0 rounded-b-2xl p-5">
               <div class="flex items-center gap-3">
                 <span class="text-terra select-none shrink-0">PS&gt;</span>
-                <code id="install-win" class="font-mono text-sm text-cream-50 overflow-x-auto whitespace-nowrap flex-1">irm https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main/install.ps1 | iex</code>
+                <code id="install-win" class="font-mono text-sm text-cream-50 overflow-x-auto whitespace-nowrap flex-1">irm https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main/install.ps1 | iex</code>
                 <button onclick="copyText('install-win', this)" class="relative shrink-0 text-cream-300 hover:text-terra transition-colors p-1" aria-label="Copy">
                   <i class="fa-regular fa-copy"></i>
                   <span class="copy-tooltip absolute -top-8 left-1/2 -translate-x-1/2 text-xs bg-dark-100 text-terra px-2 py-1 rounded whitespace-nowrap">Copied!</span>
@@ -777,12 +777,12 @@
         <span class="text-sm text-cream-300/60">MIT License</span>
       </div>
       <div class="flex items-center gap-5">
-        <a href="https://github.com/pegasusheavy/claude-code-profiles"
+        <a href="https://github.com/quinnjr/claude-code-profiles"
            target="_blank" rel="noopener"
            class="text-sm text-cream-300 hover:text-terra transition-colors">
           <i class="fa-brands fa-github mr-1.5"></i>GitHub
         </a>
-        <a href="https://github.com/pegasusheavy/claude-code-profiles/issues"
+        <a href="https://github.com/quinnjr/claude-code-profiles/issues"
            target="_blank" rel="noopener"
            class="text-sm text-cream-300 hover:text-terra transition-colors">
           <i class="fa-solid fa-bug mr-1.5"></i>Issues

@@ -47,4 +47,4 @@ Allow: /
 User-agent: Diffbot
 Allow: /
 
-Sitemap: https://pegasusheavy.github.io/claude-code-profiles/sitemap.xml
+Sitemap: https://quinnjr.github.io/claude-code-profiles/sitemap.xml

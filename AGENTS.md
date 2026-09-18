@@ -1,4 +1,4 @@
-# CLAUDE.md
+# AGENTS.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
@@ -102,4 +102,4 @@ Use `git worktree` (via `.worktrees/`) for parallel branch work.
 
 ## When Modifying
 
-Any behavioral change must be applied to all three implementations (`claude-profile.sh`, `claude-profile.cmd`, `claude-profile-init.ps1`) plus updated in `README.md`. The install scripts (`install.sh`, `install.ps1`) reference `https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main/` for download URLs.
+Any behavioral change must be applied to all three implementations (`claude-profile.sh`, `claude-profile.cmd`, `claude-profile-init.ps1`) plus updated in `README.md`. The install scripts (`install.sh`, `install.ps1`) reference `https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main/` for download URLs.

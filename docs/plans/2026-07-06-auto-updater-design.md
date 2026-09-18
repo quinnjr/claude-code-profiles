@@ -85,7 +85,7 @@ Behavior on each hook:
 2. If last-checked was less than 24h ago, skip the network call entirely and only
    act on the cached result (see step 4).
 3. If 24h+ has elapsed (or the cache file doesn't exist / doesn't parse): query
-   `https://api.github.com/repos/pegasusheavy/claude-code-profiles/releases/latest`
+   `https://api.github.com/repos/quinnjr/claude-code-profiles/releases/latest`
    with a short timeout (2-3s connect/max-time). Extract `tag_name` via a strict,
    quoted parse (e.g. an anchored `"tag_name":"..."` match, not free-form text
    extraction), strip a leading `v` so it's in the same `MAJOR.MINOR.PATCH` format as
@@ -143,7 +143,7 @@ three files (not reusing `install.sh`/`install.ps1`):
    matching script for that implementation (`claude-profile.sh`,
    `claude-profile-init.ps1`, or `claude-profile.cmd`) from the raw GitHub URLs
    referenced in `CLAUDE.md`
-   (`https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main/...`).
+   (`https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main/...`).
    Use an explicit timeout on every fetch (10-15s connect / 30-60s max-time — longer
    than the passive check's since this is a foreground command the user is actively
    waiting on, but still bounded so a stalled connection fails within a predictable

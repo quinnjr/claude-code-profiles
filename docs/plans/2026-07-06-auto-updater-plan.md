@@ -413,7 +413,7 @@ Insert after the version helpers added in Task 2 (after `_cp_version_lt`), befor
 ```sh
 # --- Passive update check ---
 
-_CP_REPO_API="${CLAUDE_PROFILE_UPDATE_API_BASE:-https://api.github.com/repos/pegasusheavy/claude-code-profiles}"
+_CP_REPO_API="${CLAUDE_PROFILE_UPDATE_API_BASE:-https://api.github.com/repos/quinnjr/claude-code-profiles}"
 _CP_UPDATE_INTERVAL="${CLAUDE_PROFILE_UPDATE_CHECK_INTERVAL:-86400}"
 
 # Extracts and validates a "vX.Y.Z" tag_name from a GitHub releases-API JSON
@@ -608,7 +608,7 @@ Insert after the version helpers added in Task 3, before the `# --- claude wrapp
 ```powershell
 # --- Passive update check ---
 
-$Script:CPRepoApi = if ($env:CLAUDE_PROFILE_UPDATE_API_BASE) { $env:CLAUDE_PROFILE_UPDATE_API_BASE } else { 'https://api.github.com/repos/pegasusheavy/claude-code-profiles' }
+$Script:CPRepoApi = if ($env:CLAUDE_PROFILE_UPDATE_API_BASE) { $env:CLAUDE_PROFILE_UPDATE_API_BASE } else { 'https://api.github.com/repos/quinnjr/claude-code-profiles' }
 $Script:CPUpdateInterval = if ($env:CLAUDE_PROFILE_UPDATE_CHECK_INTERVAL) { [long]$env:CLAUDE_PROFILE_UPDATE_CHECK_INTERVAL } else { 86400 }
 
 function Get-CPTagVersion {
@@ -751,7 +751,7 @@ After the `_CP_VERSION_FILE` line added in Task 4, add:
 
 ```bat
 set "_CP_UPDATE_CACHE=%_CP_INSTALL_DIR%\.update-check"
-set "_CP_REPO_API=https://api.github.com/repos/pegasusheavy/claude-code-profiles"
+set "_CP_REPO_API=https://api.github.com/repos/quinnjr/claude-code-profiles"
 if not defined _CP_REPO_API_OVERRIDE (rem no-op, placeholder for readability)
 if defined CLAUDE_PROFILE_UPDATE_API_BASE set "_CP_REPO_API=%CLAUDE_PROFILE_UPDATE_API_BASE%"
 set "_CP_UPDATE_INTERVAL=86400"
@@ -932,7 +932,7 @@ git commit -m "feat(cmd): add passive update-check hooked into command dispatch"
 Add next to `_CP_REPO_API` (from Task 5):
 
 ```sh
-_CP_ASSET_BASE="${CLAUDE_PROFILE_UPDATE_ASSET_BASE:-https://github.com/pegasusheavy/claude-code-profiles/releases/download}"
+_CP_ASSET_BASE="${CLAUDE_PROFILE_UPDATE_ASSET_BASE:-https://github.com/quinnjr/claude-code-profiles/releases/download}"
 ```
 
 Add after `_cp_extract_tag_version` (from Task 5):
@@ -1144,7 +1144,7 @@ git commit -m "feat(sh): add 'update' command with checksum-verified atomic repl
 Add next to `$Script:CPRepoApi` (from Task 6):
 
 ```powershell
-$Script:CPAssetBase = if ($env:CLAUDE_PROFILE_UPDATE_ASSET_BASE) { $env:CLAUDE_PROFILE_UPDATE_ASSET_BASE } else { 'https://github.com/pegasusheavy/claude-code-profiles/releases/download' }
+$Script:CPAssetBase = if ($env:CLAUDE_PROFILE_UPDATE_ASSET_BASE) { $env:CLAUDE_PROFILE_UPDATE_ASSET_BASE } else { 'https://github.com/quinnjr/claude-code-profiles/releases/download' }
 
 function Test-CPChecksum {
     param([string]$FilePath, [string]$SumsPath)
@@ -1278,7 +1278,7 @@ git commit -m "feat(ps1): add 'update' command with checksum-verified atomic rep
 Next to `_CP_REPO_API` (from Task 7), add:
 
 ```bat
-set "_CP_ASSET_BASE=https://github.com/pegasusheavy/claude-code-profiles/releases/download"
+set "_CP_ASSET_BASE=https://github.com/quinnjr/claude-code-profiles/releases/download"
 if defined CLAUDE_PROFILE_UPDATE_ASSET_BASE set "_CP_ASSET_BASE=%CLAUDE_PROFILE_UPDATE_ASSET_BASE%"
 ```
 

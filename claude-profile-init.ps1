@@ -56,8 +56,8 @@ function Test-CPVersionLessThan {
 
 # --- Passive update check ---
 
-$Script:CPRepoApi = if ($env:CLAUDE_PROFILE_UPDATE_API_BASE) { $env:CLAUDE_PROFILE_UPDATE_API_BASE } else { 'https://api.github.com/repos/pegasusheavy/claude-code-profiles' }
-$Script:CPAssetBase = if ($env:CLAUDE_PROFILE_UPDATE_ASSET_BASE) { $env:CLAUDE_PROFILE_UPDATE_ASSET_BASE } else { 'https://github.com/pegasusheavy/claude-code-profiles/releases/download' }
+$Script:CPRepoApi = if ($env:CLAUDE_PROFILE_UPDATE_API_BASE) { $env:CLAUDE_PROFILE_UPDATE_API_BASE } else { 'https://api.github.com/repos/quinnjr/claude-code-profiles' }
+$Script:CPAssetBase = if ($env:CLAUDE_PROFILE_UPDATE_ASSET_BASE) { $env:CLAUDE_PROFILE_UPDATE_ASSET_BASE } else { 'https://github.com/quinnjr/claude-code-profiles/releases/download' }
 
 function Test-CPChecksum {
     param([string]$FilePath, [string]$SumsPath)

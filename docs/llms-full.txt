@@ -7,21 +7,21 @@ claude-profile is a free, open-source shell tool that wraps the `claude` CLI bin
 Each profile is a complete, isolated Claude Code configuration directory containing settings.json, .credentials.json, MCP server configs, CLAUDE.md, plugins, and history.
 
 License: MIT
-Repository: https://github.com/pegasusheavy/claude-code-profiles
-Website: https://pegasusheavy.github.io/claude-code-profiles/
+Repository: https://github.com/quinnjr/claude-code-profiles
+Website: https://quinnjr.github.io/claude-code-profiles/
 
 ## Install
 
 **Linux / macOS / WSL:**
 
 ```
-curl -fsSL https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main/install.sh | sh
 ```
 
 **Windows (PowerShell):**
 
 ```
-irm https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main/install.ps1 | iex
 ```
 
 The installer downloads the appropriate scripts and configures your shell. Restart your shell (or open a new terminal) after installing.
@@ -139,7 +139,7 @@ Profile names must match `[A-Za-z0-9_-]+`. Reject: empty, starts with `.`, conta
 ```
 # Download
 mkdir -p "${XDG_DATA_HOME:-$HOME/.local/share}/claude-profile"
-curl -fsSL https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main/claude-profile.sh \
+curl -fsSL https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main/claude-profile.sh \
   -o "${XDG_DATA_HOME:-$HOME/.local/share}/claude-profile/claude-profile.sh"
 
 # Add to shell profile (.bashrc or .zshrc)
@@ -151,8 +151,8 @@ echo '. "${XDG_DATA_HOME:-$HOME/.local/share}/claude-profile/claude-profile.sh"'
 ```
 $dir = "$env:LOCALAPPDATA\claude-profile"
 New-Item -ItemType Directory -Force -Path $dir | Out-Null
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main/claude-profile-init.ps1" -OutFile "$dir\claude-profile-init.ps1"
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main/claude-profile.cmd" -OutFile "$dir\claude-profile.cmd"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main/claude-profile-init.ps1" -OutFile "$dir\claude-profile-init.ps1"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main/claude-profile.cmd" -OutFile "$dir\claude-profile.cmd"
 # Add to PowerShell profile
 Add-Content -Path $PROFILE -Value ". '$dir\claude-profile-init.ps1'"
 # Add to PATH for cmd.exe
@@ -166,7 +166,7 @@ if ($path -notlike "*$dir*") { [Environment]::SetEnvironmentVariable('Path', "$p
 claude-profile is a free, open-source tool that lets you manage multiple Claude Code configuration profiles. Each profile is a complete, isolated Claude Code configuration directory containing settings, credentials, MCP servers, history, and CLAUDE.md. It works like nvm for Node.js or pyenv for Python — transparently resolving your active profile when you run the claude command.
 
 **How do I install claude-profile?**
-On Linux, macOS, or WSL, run: `curl -fsSL https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main/install.sh | sh`. On Windows PowerShell, run: `irm https://raw.githubusercontent.com/pegasusheavy/claude-code-profiles/main/install.ps1 | iex`. Then restart your shell.
+On Linux, macOS, or WSL, run: `curl -fsSL https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main/install.sh | sh`. On Windows PowerShell, run: `irm https://raw.githubusercontent.com/quinnjr/claude-code-profiles/main/install.ps1 | iex`. Then restart your shell.
 
 **What shells does claude-profile support?**
 claude-profile supports bash, zsh, PowerShell 5.1+, PowerShell Core (pwsh) 6+, and Windows cmd.exe. On Unix shells it works via sourceable shell functions. On Windows it provides both a PowerShell module and a cmd.exe batch script.
