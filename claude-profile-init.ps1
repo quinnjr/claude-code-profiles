@@ -163,7 +163,7 @@ function Invoke-CPUpdateCheck {
             $newVer = $cache.Version
             try {
                 $resp = Invoke-RestMethod -Uri "$($Script:CPRepoApi)/releases/latest" -TimeoutSec 3 -ErrorAction Stop
-                $extracted = Get-CPTagVersion -Json ($resp | ConvertTo-Json -Compress)
+                $extracted = Get-CPTagVersion -Json ($resp | ConvertTo-Json -Compress -Depth 10)
                 if ($extracted) { $newVer = $extracted }
             } catch {
                 # network/API failure: silently keep the previous cached version
@@ -1222,7 +1222,7 @@ function claude-profile {
                 _cp_die 'update failed: could not reach GitHub'
                 return
             }
-            $latest = Get-CPTagVersion -Json ($resp | ConvertTo-Json -Compress)
+            $latest = Get-CPTagVersion -Json ($resp | ConvertTo-Json -Compress -Depth 10)
             if (-not $latest) {
                 _cp_die 'update failed: could not determine latest version'
                 return
